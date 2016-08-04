@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h2><%= @person.first_name @person.last_name %></h2>
+
+<img class="profile-image" src="<%= @person.house.banner_url %>" alt="">
+
+
+
+<%= link_to "Edit This Person", edit_person_path(@person) %>

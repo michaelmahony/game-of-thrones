@@ -1,0 +1,9 @@
+<h2>Edit House <%= @house.name %></h2>
+<%=	 render 'form' %>
+
+
+<h2>Delete House <%= @house.name %></h2>
+<form action="/houses/<%= @house.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete House">
+</form>
